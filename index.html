@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <title>MONO7177 | Construction & Development</title>
-    <link rel="stylesheet" href="./css/output.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <meta
-        name="description"
-        content="MONO7177 is a modern construction company focused on quality, precision and building spaces that last."
-    >
+      name="description"
+      content="MONO7177 is a modern construction company focused on quality, precision and building spaces that last."
+    />
 
     <!-- Tailwind CSS ONLY -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -28,1586 +28,1236 @@
         };
     </script> -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
-</head>
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="m-0 overflow-x-hidden bg-[#0B0B0B] font-inter text-white">
-     <!-- =========================================
+  <body class="m-0 overflow-x-hidden bg-[#0B0B0B] font-inter text-white">
+    <!-- =========================================
          PRELOADER
     ========================================= -->
 
     <div
-        id="preloader"
-        class="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0B0B0B] opacity-100 transition-opacity duration-700"
+      id="preloader"
+      class="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0B0B0B] opacity-100 transition-opacity duration-700"
     >
-        <div class="w-[280px] px-5">
-
-            <div class="mb-4 flex items-end justify-between">
-
-                <div>
-                    <div class="text-2xl font-black tracking-tight">
-                        MONO<span class="text-[#F5B300]">7177</span>
-                    </div>
-
-                    <div class="mt-1 text-[9px] uppercase tracking-[0.3em] text-white/40">
-                        Construction
-                    </div>
-                </div>
-
-                <div
-                    id="loaderPercentage"
-                    class="text-xs font-bold text-[#F5B300]"
-                >
-                    0%
-                </div>
-
+      <div class="w-[280px] px-5">
+        <div class="mb-4 flex items-end justify-between">
+          <div>
+            <div class="text-2xl font-black tracking-tight">
+              MONO<span class="text-[#F5B300]">7177</span>
             </div>
 
-            <div class="h-0.5 w-full overflow-hidden bg-white/15">
-
-                <div
-                    id="loaderFill"
-                    class="h-full w-0 bg-[#F5B300] transition-[width] duration-100"
-                ></div>
-
+            <div
+              class="mt-1 text-[9px] uppercase tracking-[0.3em] text-white/40"
+            >
+              Construction
             </div>
+          </div>
 
+          <div id="loaderPercentage" class="text-xs font-bold text-[#F5B300]">
+            0%
+          </div>
         </div>
+
+        <div class="h-0.5 w-full overflow-hidden bg-white/15">
+          <div
+            id="loaderFill"
+            class="h-full w-0 bg-[#F5B300] transition-[width] duration-100"
+          ></div>
+        </div>
+      </div>
     </div>
-
-
 
     <!-- =========================================
          SCROLL PROGRESS
     ========================================= -->
 
-<div id="scrollProgress"></div>
+    <div id="scrollProgress"></div>
 
-<div class="progress-points">
+    <div class="progress-points">
+      <span class="progress-point" data-progress="0" style="left: 0%"> </span>
 
-    <span
-        class="progress-point"
-        data-progress="0"
-        style="left: 0%;">
-    </span>
+      <span class="progress-point" data-progress="18" style="left: 18%"> </span>
 
-    <span
-        class="progress-point"
-        data-progress="18"
-        style="left: 18%;">
-    </span>
+      <span class="progress-point" data-progress="40" style="left: 40%"> </span>
 
-    <span
-        class="progress-point"
-        data-progress="40"
-        style="left: 40%;">
-    </span>
+      <span class="progress-point" data-progress="65" style="left: 65%"> </span>
 
-    <span
-        class="progress-point"
-        data-progress="65"
-        style="left: 65%;">
-    </span>
+      <span class="progress-point" data-progress="84" style="left: 84%"> </span>
 
-    <span
-        class="progress-point"
-        data-progress="84"
-        style="left: 84%;">
-    </span>
+      <span class="progress-point" data-progress="100" style="left: 100%">
+      </span>
+    </div>
 
-    <span
-        class="progress-point"
-        data-progress="100"
-        style="left: 100%;">
-    </span>
-
-</div>
-
-
-<!-- =========================================
+    <!-- =========================================
      NAVIGATION
 ========================================= -->
 
-<header class="fixed top-0 left-0 w-full z-[9000]">
-
-    <nav class="border-b border-white/10 bg-black/70 backdrop-blur-xl">
-
+    <header class="fixed top-0 left-0 w-full z-[9000]">
+      <nav class="border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div class="h-20 flex items-center justify-between">
+            <!-- Logo -->
 
-            <div class="h-20 flex items-center justify-between">
+            <a href="#home" class="group">
+              <div class="flex flex-col items-start">
+                <img
+                  src="assets/logo.png"
+                  alt="MONO 7177 Construction Limited"
+                  class="h-10 md:h-12 w-auto object-contain rounded-sm pr-1 bg-[#F8F3E7]"
+                />
+              </div>
+            </a>
 
-                <!-- Logo -->
+            <!-- Desktop Navigation -->
 
-                <a href="#home" class="group">
+            <div class="hidden md:flex items-center gap-9">
+              <a href="#home" class="nav-link active text-xs font-semibold">
+                Home
+              </a>
 
-                    <div class="text-xl font-black tracking-tight">
-                        MONO<span class="text-mono-gold">7177</span>
-                    </div>
+              <a href="#about" class="nav-link text-xs font-semibold">
+                About
+              </a>
 
-                    <div class="text-[8px] uppercase tracking-[0.35em] text-white/40">
-                        Construction
-                    </div>
+              <a href="#services" class="nav-link text-xs font-semibold">
+                Services
+              </a>
 
-                </a>
+              <a href="#projects" class="nav-link text-xs font-semibold">
+                Projects
+              </a>
 
-
-                <!-- Desktop Navigation -->
-
-                <div class="hidden md:flex items-center gap-9">
-
-                    <a href="#home" class="nav-link active text-xs font-semibold">
-                        Home
-                    </a>
-
-                    <a href="#about" class="nav-link text-xs font-semibold">
-                        About
-                    </a>
-
-                    <a href="#services" class="nav-link text-xs font-semibold">
-                        Services
-                    </a>
-
-                    <a href="#projects" class="nav-link text-xs font-semibold">
-                        Projects
-                    </a>
-
-                    <a href="#process" class="nav-link text-xs font-semibold">
-                        Process
-                    </a>
-
-                </div>
-
-
-                <!-- Desktop CTA -->
-
-                <a
-                    href="#contact"
-                    class="hidden md:inline-flex mono-button "
-                >
-                    <span>Start a Project</span>
-
-                    <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M5 12h14"/>
-                        <path d="m13 6 6 6-6 6"/>
-                    </svg>
-
-                </a>
-
-
-                <!-- Mobile Button -->
-
-                <button
-                    id="mobileButton"
-                    class="md:hidden w-10 h-10 border border-white/15 flex items-center justify-center"
-                    aria-label="Open menu"
-                >
-
-                    <div class="space-y-1.5">
-
-                        <span class="block w-5 h-px bg-white"></span>
-                        <span class="block w-5 h-px bg-white"></span>
-
-                    </div>
-
-                </button>
-
+              <a href="#process" class="nav-link text-xs font-semibold">
+                Process
+              </a>
             </div>
 
+            <!-- Desktop CTA -->
 
-            <!-- Mobile Menu -->
+            <a href="#contact" class="hidden md:inline-flex mono-button">
+              <span>Start a Project</span>
 
-            <div id="mobileMenu" class="md:hidden">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14" />
+                <path d="m13 6 6 6-6 6" />
+              </svg>
+            </a>
 
-                <div class="py-5 border-t border-white/10 flex flex-col">
+            <!-- Mobile Button -->
 
-                    <a href="#home" class="mobile-link py-3 text-sm text-white/70">
-                        Home
-                    </a>
+            <button
+              id="mobileButton"
+              class="md:hidden w-10 h-10 border border-white/15 flex items-center justify-center"
+              aria-label="Open menu"
+            >
+              <div class="space-y-1.5">
+                <span class="block w-5 h-px bg-white"></span>
+                <span class="block w-5 h-px bg-white"></span>
+              </div>
+            </button>
+          </div>
 
-                    <a href="#about" class="mobile-link py-3 text-sm text-white/70">
-                        About
-                    </a>
+          <!-- Mobile Menu -->
 
-                    <a href="#services" class="mobile-link py-3 text-sm text-white/70">
-                        Services
-                    </a>
+          <div id="mobileMenu" class="md:hidden">
+            <div class="py-5 border-t border-white/10 flex flex-col">
+              <a href="#home" class="mobile-link py-3 text-sm text-white/70">
+                Home
+              </a>
 
-                    <a href="#projects" class="mobile-link py-3 text-sm text-white/70">
-                        Projects
-                    </a>
+              <a href="#about" class="mobile-link py-3 text-sm text-white/70">
+                About
+              </a>
 
-                    <a href="#process" class="mobile-link py-3 text-sm text-white/70">
-                        Process
-                    </a>
+              <a
+                href="#services"
+                class="mobile-link py-3 text-sm text-white/70"
+              >
+                Services
+              </a>
 
-                    <a href="#contact" class="mobile-link py-3 text-mono-gold font-bold">
-                        Start a Project →
-                    </a>
+              <a
+                href="#projects"
+                class="mobile-link py-3 text-sm text-white/70"
+              >
+                Projects
+              </a>
 
-                </div>
+              <a href="#process" class="mobile-link py-3 text-sm text-white/70">
+                Process
+              </a>
 
+              <a
+                href="#contact"
+                class="mobile-link py-3 text-mono-gold font-bold"
+              >
+                Start a Project →
+              </a>
             </div>
-
+          </div>
         </div>
-
-    </nav>
-
-
-
+      </nav>
     </header>
 
-
     <main>
-
-
-        <!-- =========================================
+      <!-- =========================================
              HERO
         ========================================= -->
 
-        <section
-            id="home"
-            data-section="home"
-            class="relative flex min-h-screen items-center overflow-hidden"
+      <section
+        id="home"
+        data-section="home"
+        class="relative flex min-h-screen items-center overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <img
+            class="hero-image h-full w-full scale-105 object-cover transition-transform duration-[1800ms] ease-out"
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=90"
+            alt="Modern construction architecture"
+          />
+
+          <div class="absolute inset-0 bg-black/60"></div>
+
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/20"
+          ></div>
+        </div>
+
+        <div
+          class="relative z-10 mx-auto w-full max-w-[1400px] px-6 pt-32 lg:px-10"
         >
+          <div class="max-w-5xl">
+            <div
+              class="reveal opacity-0 translate-y-12 transition-all duration-700 ease-out"
+            >
+              <div class="mb-7 flex items-center gap-3">
+                <span class="h-px w-10 bg-[#F5B300]"></span>
 
-            <div class="absolute inset-0">
-
-                <img
-                    class="hero-image h-full w-full scale-105 object-cover transition-transform duration-[1800ms] ease-out"
-                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=90"
-                    alt="Modern construction architecture"
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5B300]"
                 >
-
-                <div class="absolute inset-0 bg-black/60"></div>
-
-                <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/20"></div>
-
+                  Construction & Development
+                </span>
+              </div>
             </div>
 
+            <h1
+              class="reveal text-[15vw] font-black leading-[0.82] tracking-[-0.06em] opacity-0 translate-y-12 transition-all duration-700 ease-out md:text-[10vw] lg:text-[8vw]"
+            >
+              BUILDING
+              <br />
 
-            <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6 pt-32 lg:px-10">
+              <span class="text-white/20 typewriter"> WHAT </span>
+              <span class="typewriter-cursor"></span>
 
-                <div class="max-w-5xl">
+              <br />
 
-                    <div class="reveal opacity-0 translate-y-12 transition-all duration-700 ease-out">
+              MATTERS<span class="text-[#F5B300]">.</span>
+            </h1>
 
-                        <div class="mb-7 flex items-center gap-3">
+            <div
+              class="reveal mt-10 max-w-xl opacity-0 translate-y-12 transition-all duration-700 ease-out"
+            >
+              <p class="text-base leading-relaxed text-white/65 md:text-lg">
+                We build with precision, purpose and a commitment to work that
+                stands the test of time.
+              </p>
+            </div>
 
-                            <span class="h-px w-10 bg-[#F5B300]"></span>
-
-                            <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5B300]">
-                                Construction & Development
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <h1 class="reveal text-[15vw] font-black leading-[0.82] tracking-[-0.06em] opacity-0 translate-y-12 transition-all duration-700 ease-out md:text-[10vw] lg:text-[8vw]">
-
-                        BUILDING
-                        <br>
-
-                        <span class="text-white/20 typewriter">
-                            WHAT
-                        </span>
-                        <span class="typewriter-cursor"></span>
-
-                        <br>
-
-                        MATTERS<span class="text-[#F5B300]">.</span>
-
-                    </h1>
-
-
-                    <div class="reveal mt-10 max-w-xl opacity-0 translate-y-12 transition-all duration-700 ease-out">
-
-                        <p class="text-base leading-relaxed text-white/65 md:text-lg">
-
-                            We build with precision, purpose and a commitment to work
-                            that stands the test of time.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="reveal mt-8 opacity-0 translate-y-12 transition-all duration-700 ease-out">
-
-                      <a
+            <div
+              class="reveal mt-8 opacity-0 translate-y-12 transition-all duration-700 ease-out"
+            >
+              <a
                 href="#contact"
                 class="group relative inline-flex items-center gap-2.5 overflow-hidden bg-[#F5B300] px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.08em] text-[#0B0B0B] sm:gap-3 sm:px-5 sm:py-3.5 sm:text-[11px] sm:tracking-[0.1em]"
-            >
+              >
                 <span
-                    class="absolute inset-y-0 left-0 z-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full"
+                  class="absolute inset-y-0 left-0 z-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full"
                 ></span>
 
                 <span class="relative z-10 text-[#0B0B0B]">
-                    Start a Project
+                  Start a Project
                 </span>
 
                 <svg
-                    class="relative z-10 h-4 w-4 text-[#0B0B0B] sm:h-[17px] sm:w-[17px]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
+                  class="relative z-10 h-4 w-4 text-[#0B0B0B] sm:h-[17px] sm:w-[17px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
-                    <path d="M5 12h14"/>
-                    <path d="m13 6 6 6-6 6"/>
+                  <path d="M5 12h14" />
+                  <path d="m13 6 6 6-6 6" />
                 </svg>
-            </a>
-                                </div>
+              </a>
+            </div>
+          </div>
 
-                </div>
+          <!-- Stats -->
 
+          <div
+            class="mt-24 grid grid-cols-2 border-t border-white/15 md:grid-cols-4 lg:mt-32"
+          >
+            <div class="border-r border-white/15 py-5">
+              <div class="text-2xl font-black">01</div>
 
-                <!-- Stats -->
-
-                <div class="mt-24 grid grid-cols-2 border-t border-white/15 md:grid-cols-4 lg:mt-32">
-
-                    <div class="border-r border-white/15 py-5">
-
-                        <div class="text-2xl font-black">
-                            01
-                        </div>
-
-                        <div class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
-                            Precision
-                        </div>
-
-                    </div>
-
-
-                    <div class="border-r border-white/15 px-5 py-5 md:px-7">
-
-                        <div class="text-2xl font-black">
-                            02
-                        </div>
-
-                        <div class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
-                            Quality
-                        </div>
-
-                    </div>
-
-
-                    <div class="border-r border-white/15 px-5 py-5 md:px-7">
-
-                        <div class="text-2xl font-black">
-                            03
-                        </div>
-
-                        <div class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
-                            Reliability
-                        </div>
-
-                    </div>
-
-
-                    <div class="px-5 py-5 md:px-7">
-
-                        <div class="text-2xl font-black">
-                            04
-                        </div>
-
-                        <div class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
-                            Experience
-                        </div>
-
-                    </div>
-
-                </div>
-
+              <div
+                class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40"
+              >
+                Precision
+              </div>
             </div>
 
+            <div class="border-r border-white/15 px-5 py-5 md:px-7">
+              <div class="text-2xl font-black">02</div>
 
-            <!-- Scroll indicator -->
-
-            <div class="absolute bottom-8 right-7 hidden flex-col items-center gap-3 lg:flex">
-
-                <span class="[writing-mode:vertical-rl] text-[8px] uppercase tracking-[0.3em] text-white/40">
-                    Scroll
-                </span>
-
-                <div class="h-14 w-px bg-gradient-to-b from-[#F5B300] to-transparent"></div>
-
+              <div
+                class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40"
+              >
+                Quality
+              </div>
             </div>
 
-        </section>
+            <div class="border-r border-white/15 px-5 py-5 md:px-7">
+              <div class="text-2xl font-black">03</div>
 
+              <div
+                class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40"
+              >
+                Reliability
+              </div>
+            </div>
 
-        <!-- =========================================
+            <div class="px-5 py-5 md:px-7">
+              <div class="text-2xl font-black">04</div>
+
+              <div
+                class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40"
+              >
+                Experience
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+
+        <div
+          class="absolute bottom-8 right-7 hidden flex-col items-center gap-3 lg:flex"
+        >
+          <span
+            class="[writing-mode:vertical-rl] text-[8px] uppercase tracking-[0.3em] text-white/40"
+          >
+            Scroll
+          </span>
+
+          <div
+            class="h-14 w-px bg-gradient-to-b from-[#F5B300] to-transparent"
+          ></div>
+        </div>
+      </section>
+
+      <!-- =========================================
              ABOUT
         ========================================= -->
 
-        <section
-            id="about"
-            data-section="about"
-            class="bg-[#F8F3E7] py-28 text-[#0B0B0B] lg:py-40"
-        >
+      <section
+        id="about"
+        data-section="about"
+        class="bg-[#F8F3E7] py-28 text-[#0B0B0B] lg:py-40"
+      >
+        <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
+          <div class="grid items-start gap-12 lg:grid-cols-12 lg:gap-20">
+            <div class="lg:col-span-4">
+              <div class="flex items-center gap-3">
+                <span class="h-px w-8 bg-[#F5B300]"></span>
 
-            <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
-
-                <div class="grid items-start gap-12 lg:grid-cols-12 lg:gap-20">
-
-                    <div class="lg:col-span-4">
-
-                        <div class="flex items-center gap-3">
-
-                            <span class="h-px w-8 bg-[#F5B300]"></span>
-
-                            <span class="text-[10px] font-bold uppercase tracking-[0.3em]">
-                                About MONO7177
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="lg:col-span-8">
-
-                        <h2 class="text-4xl font-black leading-[0.95] tracking-[-0.05em] md:text-6xl lg:text-7xl">
-
-                            WE BUILD MORE
-                            <br>
-                            THAN STRUCTURES<span class="text-[#F5B300]">.</span>
-
-                        </h2>
-
-
-                        <p class="mt-10 max-w-2xl text-lg leading-relaxed text-black/60">
-
-                            MONO7177 brings together construction expertise, thoughtful
-                            planning and attention to detail to deliver spaces designed
-                            around the people who use them.
-
-                        </p>
-
-
-                        <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3">
-
-                            <div>
-
-                                <div class="text-5xl font-black">
-                                    10+
-                                </div>
-
-                                <div class="mt-2 text-xs uppercase tracking-[0.2em] text-black/45">
-                                    Years Experience
-                                </div>
-
-                            </div>
-
-
-                            <div>
-
-                                <div class="text-5xl font-black">
-                                    100+
-                                </div>
-
-                                <div class="mt-2 text-xs uppercase tracking-[0.2em] text-black/45">
-                                    Projects
-                                </div>
-
-                            </div>
-
-
-                            <div>
-
-                                <div class="text-5xl font-black">
-                                    01
-                                </div>
-
-                                <div class="mt-2 text-xs uppercase tracking-[0.2em] text-black/45">
-                                    Standard
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <span class="text-[10px] font-bold uppercase tracking-[0.3em]">
+                  About MONO7177
+                </span>
+              </div>
             </div>
 
-        </section>
+            <div class="lg:col-span-8">
+              <h2
+                class="text-4xl font-black leading-[0.95] tracking-[-0.05em] md:text-6xl lg:text-7xl"
+              >
+                WE BUILD MORE
+                <br />
+                THAN STRUCTURES<span class="text-[#F5B300]">.</span>
+              </h2>
 
+              <p class="mt-10 max-w-2xl text-lg leading-relaxed text-black/60">
+                MONO7177 brings together construction expertise, thoughtful
+                planning and attention to detail to deliver spaces designed
+                around the people who use them.
+              </p>
 
-        <!-- =========================================
+              <div class="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3">
+                <div>
+                  <div class="text-5xl font-black">10+</div>
+
+                  <div
+                    class="mt-2 text-xs uppercase tracking-[0.2em] text-black/45"
+                  >
+                    Years Experience
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-5xl font-black">100+</div>
+
+                  <div
+                    class="mt-2 text-xs uppercase tracking-[0.2em] text-black/45"
+                  >
+                    Projects
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-5xl font-black">01</div>
+
+                  <div
+                    class="mt-2 text-xs uppercase tracking-[0.2em] text-black/45"
+                  >
+                    Standard
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
              SERVICES
         ========================================= -->
 
-
-<!-- SERVICES -->
-<section id="services" class="py-32 bg-[#0B0B0B]">
-    <div class="max-w-7xl mx-auto px-6">
-
-        <!-- Header -->
-        <div class="grid lg:grid-cols-2 gap-12 items-end mb-20">
+      <!-- SERVICES -->
+      <section id="services" class="py-32 bg-[#0B0B0B]">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Header -->
+          <div class="grid lg:grid-cols-2 gap-12 items-end mb-20">
             <div>
-                <p class="text-[#F5B300] text-sm tracking-[0.3em] uppercase mb-5">
-                    What We Do
-                </p>
+              <p class="text-[#F5B300] text-sm tracking-[0.3em] uppercase mb-5">
+                What We Do
+              </p>
 
-                <h2 class="text-5xl md:text-7xl font-bold tracking-tight text-white">
-                    Our Services
-                </h2>
+              <h2
+                class="text-5xl md:text-7xl font-bold tracking-tight text-white"
+              >
+                Our Services
+              </h2>
             </div>
 
             <p class="text-white/50 text-lg max-w-xl leading-relaxed">
-                Professional installation and construction services delivered
-                with precision, quality, and attention to detail.
+              Professional installation and construction services delivered with
+              precision, quality, and attention to detail.
             </p>
-        </div>
+          </div>
 
-        <!-- Services Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
-
+          <!-- Services Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
             <!-- Door Installation -->
-            <a href="#contact"
-               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+            <a
+              href="#contact"
+              class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300"
+            >
+              <div class="flex items-start justify-between">
+                <!-- DOOR ICON -->
+                <svg
+                  class="w-12 h-12 text-[#F5B300]"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10 42V6C10 4.89543 10.8954 4 12 4H36C37.1046 4 38 4.89543 38 6V42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M16 42V10H32V42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle cx="28" cy="26" r="1.8" fill="currentColor" />
+                  <path d="M6 42H42" stroke="currentColor" stroke-width="2" />
+                </svg>
 
-                <div class="flex items-start justify-between">
+                <svg
+                  class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </div>
 
-                    <!-- DOOR ICON -->
-                    <svg
-                        class="w-12 h-12 text-[#F5B300]"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M10 42V6C10 4.89543 10.8954 4 12 4H36C37.1046 4 38 4.89543 38 6V42"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M16 42V10H32V42"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <circle
-                            cx="28"
-                            cy="26"
-                            r="1.8"
-                            fill="currentColor"
-                        />
-                        <path
-                            d="M6 42H42"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                    </svg>
+              <div>
+                <h3 class="text-2xl font-semibold text-white mb-3">
+                  Door Installation
+                </h3>
 
-                    <svg
-                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                        aria-hidden="true"
-                    >
-                        <path d="M7 17L17 7"/>
-                        <path d="M7 7H17V17"/>
-                    </svg>
-
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">
-                        Door Installation
-                    </h3>
-
-                    <p class="text-white/40 leading-relaxed">
-                        Professional door installation with precise fitting,
-                        finishing, and reliable workmanship.
-                    </p>
-                </div>
+                <p class="text-white/40 leading-relaxed">
+                  Professional door installation with precise fitting,
+                  finishing, and reliable workmanship.
+                </p>
+              </div>
             </a>
-
 
             <!-- Window Installation -->
-            <a href="#contact"
-               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+            <a
+              href="#contact"
+              class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300"
+            >
+              <div class="flex items-start justify-between">
+                <!-- WINDOW ICON -->
+                <svg
+                  class="w-12 h-12 text-[#F5B300]"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="5"
+                    y="5"
+                    width="38"
+                    height="38"
+                    rx="1"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path d="M24 5V43" stroke="currentColor" stroke-width="2" />
+                  <path d="M5 24H43" stroke="currentColor" stroke-width="2" />
+                </svg>
 
-                <div class="flex items-start justify-between">
+                <svg
+                  class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </div>
 
-                    <!-- WINDOW ICON -->
-                    <svg
-                        class="w-12 h-12 text-[#F5B300]"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        <rect
-                            x="5"
-                            y="5"
-                            width="38"
-                            height="38"
-                            rx="1"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M24 5V43"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M5 24H43"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                    </svg>
+              <div>
+                <h3 class="text-2xl font-semibold text-white mb-3">
+                  Window Installation
+                </h3>
 
-                    <svg
-                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                        aria-hidden="true"
-                    >
-                        <path d="M7 17L17 7"/>
-                        <path d="M7 7H17V17"/>
-                    </svg>
-
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">
-                        Window Installation
-                    </h3>
-
-                    <p class="text-white/40 leading-relaxed">
-                        Quality window installation focused on accurate
-                        measurements, sealing, and clean finishing.
-                    </p>
-                </div>
+                <p class="text-white/40 leading-relaxed">
+                  Quality window installation focused on accurate measurements,
+                  sealing, and clean finishing.
+                </p>
+              </div>
             </a>
-
 
             <!-- Siding Installation -->
-            <a href="#contact"
-               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+            <a
+              href="#contact"
+              class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300"
+            >
+              <div class="flex items-start justify-between">
+                <!-- SIDING ICON -->
+                <svg
+                  class="w-12 h-12 text-[#F5B300]"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path d="M7 10H41" stroke="currentColor" stroke-width="2" />
+                  <path d="M7 18H41" stroke="currentColor" stroke-width="2" />
+                  <path d="M7 26H41" stroke="currentColor" stroke-width="2" />
+                  <path d="M7 34H41" stroke="currentColor" stroke-width="2" />
+                  <path d="M7 42H41" stroke="currentColor" stroke-width="2" />
+                  <path d="M13 10V18" stroke="currentColor" stroke-width="2" />
+                  <path d="M29 18V26" stroke="currentColor" stroke-width="2" />
+                  <path d="M18 26V34" stroke="currentColor" stroke-width="2" />
+                  <path d="M35 34V42" stroke="currentColor" stroke-width="2" />
+                </svg>
 
-                <div class="flex items-start justify-between">
+                <svg
+                  class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </div>
 
-                    <!-- SIDING ICON -->
-                    <svg
-                        class="w-12 h-12 text-[#F5B300]"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M7 10H41"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M7 18H41"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M7 26H41"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M7 34H41"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M7 42H41"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M13 10V18"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M29 18V26"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M18 26V34"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M35 34V42"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                    </svg>
+              <div>
+                <h3 class="text-2xl font-semibold text-white mb-3">
+                  Siding Installation
+                </h3>
 
-                    <svg
-                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                        aria-hidden="true"
-                    >
-                        <path d="M7 17L17 7"/>
-                        <path d="M7 7H17V17"/>
-                    </svg>
-
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">
-                        Siding Installation
-                    </h3>
-
-                    <p class="text-white/40 leading-relaxed">
-                        Durable siding installation that improves exterior
-                        protection and overall appearance.
-                    </p>
-                </div>
+                <p class="text-white/40 leading-relaxed">
+                  Durable siding installation that improves exterior protection
+                  and overall appearance.
+                </p>
+              </div>
             </a>
-
 
             <!-- Roofing -->
-            <a href="#contact"
-               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+            <a
+              href="#contact"
+              class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300"
+            >
+              <div class="flex items-start justify-between">
+                <!-- ROOFING ICON -->
+                <svg
+                  class="w-12 h-12 text-[#F5B300]"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 23L24 7L43 23"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 20V41H39V20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M18 41V29H30V41"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
 
-                <div class="flex items-start justify-between">
+                <svg
+                  class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </div>
 
-                    <!-- ROOFING ICON -->
-                    <svg
-                        class="w-12 h-12 text-[#F5B300]"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M5 23L24 7L43 23"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M9 20V41H39V20"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M18 41V29H30V41"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                    </svg>
+              <div>
+                <h3 class="text-2xl font-semibold text-white mb-3">Roofing</h3>
 
-                    <svg
-                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                        aria-hidden="true"
-                    >
-                        <path d="M7 17L17 7"/>
-                        <path d="M7 7H17V17"/>
-                    </svg>
-
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">
-                        Roofing
-                    </h3>
-
-                    <p class="text-white/40 leading-relaxed">
-                        Reliable roofing solutions built with attention to
-                        durability, installation quality, and detail.
-                    </p>
-                </div>
+                <p class="text-white/40 leading-relaxed">
+                  Reliable roofing solutions built with attention to durability,
+                  installation quality, and detail.
+                </p>
+              </div>
             </a>
-
 
             <!-- Remodeling -->
-            <a href="#contact"
-               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+            <a
+              href="#contact"
+              class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300"
+            >
+              <div class="flex items-start justify-between">
+                <!-- HAMMER ICON -->
+                <svg
+                  class="w-12 h-12 text-[#F5B300]"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M29 8L40 19"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M33 4L44 15L38 21L27 10L33 4Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M29 18L10 37"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 34L14 42"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
 
-                <div class="flex items-start justify-between">
+                <svg
+                  class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </div>
 
-                    <!-- HAMMER ICON -->
-                    <svg
-                        class="w-12 h-12 text-[#F5B300]"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M29 8L40 19"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                            stroke-linecap="round"
-                        />
-                        <path
-                            d="M33 4L44 15L38 21L27 10L33 4Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M29 18L10 37"
-                            stroke="currentColor"
-                            stroke-width="3"
-                            stroke-linecap="round"
-                        />
-                        <path
-                            d="M6 34L14 42"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                            stroke-linecap="round"
-                        />
-                    </svg>
+              <div>
+                <h3 class="text-2xl font-semibold text-white mb-3">
+                  Remodeling
+                </h3>
 
-                    <svg
-                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                        aria-hidden="true"
-                    >
-                        <path d="M7 17L17 7"/>
-                        <path d="M7 7H17V17"/>
-                    </svg>
-
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">
-                        Remodeling
-                    </h3>
-
-                    <p class="text-white/40 leading-relaxed">
-                        Professional remodeling services transforming spaces
-                        with practical design and quality craftsmanship.
-                    </p>
-                </div>
+                <p class="text-white/40 leading-relaxed">
+                  Professional remodeling services transforming spaces with
+                  practical design and quality craftsmanship.
+                </p>
+              </div>
             </a>
-
 
             <!-- Exterior Construction -->
-            <a href="#contact"
-               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+            <a
+              href="#contact"
+              class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300"
+            >
+              <div class="flex items-start justify-between">
+                <!-- BUILDING ICON -->
+                <svg
+                  class="w-12 h-12 text-[#F5B300]"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7 42V10L24 5L41 10V42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M7 42H41" stroke="currentColor" stroke-width="2" />
+                  <path d="M14 17H18" stroke="currentColor" stroke-width="2" />
+                  <path d="M30 17H34" stroke="currentColor" stroke-width="2" />
+                  <path d="M14 24H18" stroke="currentColor" stroke-width="2" />
+                  <path d="M30 24H34" stroke="currentColor" stroke-width="2" />
+                  <path
+                    d="M19 42V32H29V42"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
 
-                <div class="flex items-start justify-between">
+                <svg
+                  class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7H17V17" />
+                </svg>
+              </div>
 
-                    <!-- BUILDING ICON -->
-                    <svg
-                        class="w-12 h-12 text-[#F5B300]"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M7 42V10L24 5L41 10V42"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M7 42H41"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M14 17H18"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M30 17H34"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M14 24H18"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M30 24H34"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M19 42V32H29V42"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-                    </svg>
+              <div>
+                <h3 class="text-2xl font-semibold text-white mb-3">
+                  Exterior Construction
+                </h3>
 
-                    <svg
-                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                        aria-hidden="true"
-                    >
-                        <path d="M7 17L17 7"/>
-                        <path d="M7 7H17V17"/>
-                    </svg>
-
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">
-                        Exterior Construction
-                    </h3>
-
-                    <p class="text-white/40 leading-relaxed">
-                        Complete exterior construction work designed for
-                        lasting performance and a refined finish.
-                    </p>
-                </div>
+                <p class="text-white/40 leading-relaxed">
+                  Complete exterior construction work designed for lasting
+                  performance and a refined finish.
+                </p>
+              </div>
             </a>
-
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-
-        <!-- =========================================
+      <!-- =========================================
              PROJECTS
         ========================================= -->
 
-        <section
-            id="projects"
-            data-section="projects"
-            class="bg-[#F8F3E7] py-28 text-[#0B0B0B] lg:py-40"
-        >
-
-            <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
-
-                <div class="mb-16">
-
-                    <div class="mb-6 flex items-center gap-3">
-
-                        <span class="h-px w-8 bg-[#F5B300]"></span>
-
-                        <span class="text-[10px] font-bold uppercase tracking-[0.3em]">
-                            Selected Work
-                        </span>
-
-                    </div>
-
-
-                    <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-
-                        <h2 class=" text-5xl font-black leading-none tracking-[-0.05em] md:text-7xl">
-
-                            SELECTED
-                            <br>
-                            PROJECTS<span class="text-[#F5B300]">.</span>
-
-                        </h2>
-
-
-                        <p class="max-w-md leading-relaxed text-black/50">
-
-                            A selection of work that demonstrates our approach to
-                            construction, detail and lasting quality.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="grid gap-6 md:grid-cols-2 lg:gap-8">
-
-
-                    <!-- PROJECT 01 -->
-
-                    <article class="group">
-
-                        <div class="relative aspect-[4/3] overflow-hidden bg-black">
-
-                            <img
-                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=85"
-                                alt="Modern residential building"
-                            >
-
-                            <div class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-
-                                <div class="text-white">
-
-                                    <div class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]">
-                                        Residential
-                                    </div>
-
-                                    <div class="text-2xl font-black">
-                                        Modern Residence
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex items-start justify-between pt-5">
-
-                            <div>
-
-                                <h3 class="text-xl font-black">
-                                    Project One
-                                </h3>
-
-                                <p class="mt-1 text-xs text-black/45">
-                                    Residential Construction
-                                </p>
-
-                            </div>
-
-                            <span class="text-xl transition-colors group-hover:text-[#F5B300]">
-                                ↗
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 02 -->
-
-                    <article class="group md:mt-24">
-
-                        <div class="relative aspect-[4/3] overflow-hidden bg-black">
-
-                            <img
-                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85"
-                                alt="Commercial architecture"
-                            >
-
-                            <div class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-
-                                <div class="text-white">
-
-                                    <div class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]">
-                                        Commercial
-                                    </div>
-
-                                    <div class="text-2xl font-black">
-                                        Commercial Space
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex items-start justify-between pt-5">
-
-                            <div>
-
-                                <h3 class="text-xl font-black">
-                                    Project Two
-                                </h3>
-
-                                <p class="mt-1 text-xs text-black/45">
-                                    Commercial Construction
-                                </p>
-
-                            </div>
-
-                            <span class="text-xl transition-colors group-hover:text-[#F5B300]">
-                                ↗
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 03 -->
-
-                    <article class="group">
-
-                        <div class="relative aspect-[4/3] overflow-hidden bg-black">
-
-                            <img
-                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=85"
-                                alt="Contemporary building"
-                            >
-
-                            <div class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-
-                                <div class="text-white">
-
-                                    <div class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]">
-                                        Development
-                                    </div>
-
-                                    <div class="text-2xl font-black">
-                                        Urban Development
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex items-start justify-between pt-5">
-
-                            <div>
-
-                                <h3 class="text-xl font-black">
-                                    Project Three
-                                </h3>
-
-                                <p class="mt-1 text-xs text-black/45">
-                                    Building Development
-                                </p>
-
-                            </div>
-
-                            <span class="text-xl transition-colors group-hover:text-[#F5B300]">
-                                ↗
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 04 -->
-
-                    <article class="group md:mt-24">
-
-                        <div class="relative aspect-[4/3] overflow-hidden bg-black">
-
-                            <img
-                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
-                                alt="Luxury interior construction"
-                            >
-
-                            <div class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-
-                                <div class="text-white">
-
-                                    <div class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]">
-                                        Renovation
-                                    </div>
-
-                                    <div class="text-2xl font-black">
-                                        Interior Transformation
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex items-start justify-between pt-5">
-
-                            <div>
-
-                                <h3 class="text-xl font-black">
-                                    Project Four
-                                </h3>
-
-                                <p class="mt-1 text-xs text-black/45">
-                                    Renovation
-                                </p>
-
-                            </div>
-
-                            <span class="text-xl transition-colors group-hover:text-[#F5B300]">
-                                ↗
-                            </span>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
+      <section
+        id="projects"
+        data-section="projects"
+        class="bg-[#F8F3E7] py-28 text-[#0B0B0B] lg:py-40"
+      >
+        <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
+          <div class="mb-16">
+            <div class="mb-6 flex items-center gap-3">
+              <span class="h-px w-8 bg-[#F5B300]"></span>
+
+              <span class="text-[10px] font-bold uppercase tracking-[0.3em]">
+                Selected Work
+              </span>
             </div>
 
-        </section>
+            <div
+              class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
+            >
+              <h2
+                class="text-5xl font-black leading-none tracking-[-0.05em] md:text-7xl"
+              >
+                SELECTED
+                <br />
+                PROJECTS<span class="text-[#F5B300]">.</span>
+              </h2>
 
+              <p class="max-w-md leading-relaxed text-black/50">
+                A selection of work that demonstrates our approach to
+                construction, detail and lasting quality.
+              </p>
+            </div>
+          </div>
 
-        <!-- =========================================
+          <div class="grid gap-6 md:grid-cols-2 lg:gap-8">
+            <!-- PROJECT 01 -->
+            <article class="group">
+              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  src="assets/drywall.jpg"
+                  alt="Drywall installation"
+                />
+
+                <div
+                  class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <div class="text-white">
+                    <div
+                      class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]"
+                    >
+                      Drywall
+                    </div>
+
+                    <div class="text-2xl font-black">Drywall Installation</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between pt-5">
+                <div>
+                  <h3 class="text-xl font-black">Drywall Installation</h3>
+
+                  <p class="mt-1 text-xs text-black/45">
+                    Drywall &amp; Finishing
+                  </p>
+                </div>
+
+                <span
+                  class="text-xl transition-colors group-hover:text-[#F5B300]"
+                >
+                  ↗
+                </span>
+              </div>
+            </article>
+
+            <!-- PROJECT 02 -->
+            <article class="group md:mt-24">
+              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  src="assets/flooring.jpg"
+                  alt="Flooring installation"
+                />
+
+                <div
+                  class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <div class="text-white">
+                    <div
+                      class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]"
+                    >
+                      Flooring
+                    </div>
+
+                    <div class="text-2xl font-black">Flooring Installation</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between pt-5">
+                <div>
+                  <h3 class="text-xl font-black">Flooring Installation</h3>
+
+                  <p class="mt-1 text-xs text-black/45">
+                    Residential &amp; Commercial Flooring
+                  </p>
+                </div>
+
+                <span
+                  class="text-xl transition-colors group-hover:text-[#F5B300]"
+                >
+                  ↗
+                </span>
+              </div>
+            </article>
+
+            <!-- PROJECT 03 -->
+            <article class="group">
+              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  src="assets/mod.jpg"
+                  alt="Drywall mud and tape"
+                />
+
+                <div
+                  class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <div class="text-white">
+                    <div
+                      class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]"
+                    >
+                      Mud &amp; Tape
+                    </div>
+
+                    <div class="text-2xl font-black">
+                      Drywall Mud &amp; Tape
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between pt-5">
+                <div>
+                  <h3 class="text-xl font-black">Drywall Mud &amp; Tape</h3>
+
+                  <p class="mt-1 text-xs text-black/45">
+                    Joint Taping &amp; Finishing
+                  </p>
+                </div>
+
+                <span
+                  class="text-xl transition-colors group-hover:text-[#F5B300]"
+                >
+                  ↗
+                </span>
+              </div>
+            </article>
+
+            <!-- PROJECT 04 -->
+            <article class="group md:mt-24">
+              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  src="assets/painting.jpeg"
+                  alt="Interior painting"
+                />
+
+                <div
+                  class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <div class="text-white">
+                    <div
+                      class="mb-2 text-[9px] uppercase tracking-[0.25em] text-[#F5B300]"
+                    >
+                      Painting
+                    </div>
+
+                    <div class="text-2xl font-black">Interior Painting</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between pt-5">
+                <div>
+                  <h3 class="text-xl font-black">Interior Painting</h3>
+
+                  <p class="mt-1 text-xs text-black/45">
+                    Interior &amp; Ceiling Painting
+                  </p>
+                </div>
+
+                <span
+                  class="text-xl transition-colors group-hover:text-[#F5B300]"
+                >
+                  ↗
+                </span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
              PROCESS
         ========================================= -->
 
-        <section
-            id="process"
-            data-section="process"
-            class="bg-[#0B0B0B] py-28 lg:py-40"
-        >
+      <section
+        id="process"
+        data-section="process"
+        class="bg-[#0B0B0B] py-28 lg:py-40"
+      >
+        <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
+          <div class="mb-20 grid gap-12 lg:grid-cols-12">
+            <div class="lg:col-span-5">
+              <div class="mb-6 flex items-center gap-3">
+                <span class="h-px w-8 bg-[#F5B300]"></span>
 
-            <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5B300]"
+                >
+                  How We Work
+                </span>
+              </div>
 
-                <div class="mb-20 grid gap-12 lg:grid-cols-12">
+              <h2
+                class="text-5xl font-black leading-none tracking-[-0.05em] md:text-7xl"
+              >
+                FROM
+                <br />
+                IDEA TO
+                <br />
 
-                    <div class="lg:col-span-5">
-
-                        <div class="mb-6 flex items-center gap-3">
-
-                            <span class="h-px w-8 bg-[#F5B300]"></span>
-
-                            <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5B300]">
-                                How We Work
-                            </span>
-
-                        </div>
-
-
-                        <h2 class="text-5xl font-black leading-none tracking-[-0.05em] md:text-7xl">
-
-                            FROM
-                            <br>
-                            IDEA TO
-                            <br>
-
-                            <span class=" text-white/20">
-                                REALITY.
-                            </span>
-
-                        </h2>
-
-                    </div>
-
-
-                    <div class="flex items-end lg:col-span-7">
-
-                        <p class="max-w-2xl text-lg leading-relaxed text-white/45 md:text-xl">
-
-                            Every successful project starts with a clear process.
-                            We keep communication open, decisions deliberate and
-                            execution focused.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="grid border-t border-white/10 md:grid-cols-2 lg:grid-cols-4">
-
-
-                    <!-- PROCESS 01 -->
-
-                    <div class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:border-r lg:border-white/10 lg:pr-8">
-
-                        <div class="text-sm font-black text-[#F5B300]">
-                            01
-                        </div>
-
-                        <h3 class="mt-8 text-2xl font-black">
-                            Discover
-                        </h3>
-
-                        <p class="mt-4 text-sm leading-relaxed text-white/40">
-
-                            We understand your goals, requirements and vision before
-                            creating the path forward.
-
-                        </p>
-
-                    </div>
-
-
-                    <!-- PROCESS 02 -->
-
-                    <div class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:border-r lg:border-white/10 lg:px-8">
-
-                        <div class="text-sm font-black text-[#F5B300]">
-                            02
-                        </div>
-
-                        <h3 class="mt-8 text-2xl font-black">
-                            Plan
-                        </h3>
-
-                        <p class="mt-4 text-sm leading-relaxed text-white/40">
-
-                            Scope, scheduling, materials and resources are carefully
-                            coordinated for a clear execution plan.
-
-                        </p>
-
-                    </div>
-
-
-                    <!-- PROCESS 03 -->
-
-                    <div class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:border-r lg:border-white/10 lg:px-8">
-
-                        <div class="text-sm font-black text-[#F5B300]">
-                            03
-                        </div>
-
-                        <h3 class="mt-8 text-2xl font-black">
-                            Build
-                        </h3>
-
-                        <p class="mt-4 text-sm leading-relaxed text-white/40">
-
-                            Our team turns the plan into reality with attention to
-                            craftsmanship, safety and detail.
-
-                        </p>
-
-                    </div>
-
-
-                    <!-- PROCESS 04 -->
-
-                    <div class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:pl-8">
-
-                        <div class="text-sm font-black text-[#F5B300]">
-                            04
-                        </div>
-
-                        <h3 class="mt-8 text-2xl font-black">
-                            Deliver
-                        </h3>
-
-                        <p class="mt-4 text-sm leading-relaxed text-white/40">
-
-                            We complete the project with a focus on quality and a
-                            finished result you can be proud of.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
+                <span class="text-white/20"> REALITY. </span>
+              </h2>
             </div>
 
-        </section>
+            <div class="flex items-end lg:col-span-7">
+              <p
+                class="max-w-2xl text-lg leading-relaxed text-white/45 md:text-xl"
+              >
+                Every successful project starts with a clear process. We keep
+                communication open, decisions deliberate and execution focused.
+              </p>
+            </div>
+          </div>
 
+          <div
+            class="grid border-t border-white/10 md:grid-cols-2 lg:grid-cols-4"
+          >
+            <!-- PROCESS 01 -->
 
-        <!-- =========================================
+            <div
+              class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:border-r lg:border-white/10 lg:pr-8"
+            >
+              <div class="text-sm font-black text-[#F5B300]">01</div>
+
+              <h3 class="mt-8 text-2xl font-black">Discover</h3>
+
+              <p class="mt-4 text-sm leading-relaxed text-white/40">
+                We understand your goals, requirements and vision before
+                creating the path forward.
+              </p>
+            </div>
+
+            <!-- PROCESS 02 -->
+
+            <div
+              class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:border-r lg:border-white/10 lg:px-8"
+            >
+              <div class="text-sm font-black text-[#F5B300]">02</div>
+
+              <h3 class="mt-8 text-2xl font-black">Plan</h3>
+
+              <p class="mt-4 text-sm leading-relaxed text-white/40">
+                Scope, scheduling, materials and resources are carefully
+                coordinated for a clear execution plan.
+              </p>
+            </div>
+
+            <!-- PROCESS 03 -->
+
+            <div
+              class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:border-r lg:border-white/10 lg:px-8"
+            >
+              <div class="text-sm font-black text-[#F5B300]">03</div>
+
+              <h3 class="mt-8 text-2xl font-black">Build</h3>
+
+              <p class="mt-4 text-sm leading-relaxed text-white/40">
+                Our team turns the plan into reality with attention to
+                craftsmanship, safety and detail.
+              </p>
+            </div>
+
+            <!-- PROCESS 04 -->
+
+            <div
+              class="reveal py-10 opacity-0 translate-y-12 transition-all duration-700 ease-out lg:pl-8"
+            >
+              <div class="text-sm font-black text-[#F5B300]">04</div>
+
+              <h3 class="mt-8 text-2xl font-black">Deliver</h3>
+
+              <p class="mt-4 text-sm leading-relaxed text-white/40">
+                We complete the project with a focus on quality and a finished
+                result you can be proud of.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
              CONTACT / CTA
         ========================================= -->
 
-        <section
-            id="contact"
-            data-section="contact"
-            class="relative flex min-h-[80vh] items-center overflow-hidden"
-        >
+      <section
+        id="contact"
+        data-section="contact"
+        class="relative flex min-h-[80vh] items-center overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <img
+            class="hero-image h-full w-full object-cover"
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=90"
+            alt="Construction worker"
+          />
 
-            <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-black/75"></div>
+        </div>
 
-                <img
-                    class="h-full w-full object-cover"
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=90"
-                    alt="Construction worker"
+        <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10">
+          <div class="max-w-5xl">
+            <div
+              class="reveal mb-8 flex items-center gap-3 opacity-0 translate-y-12 transition-all duration-700 ease-out"
+            >
+              <span class="h-px w-10 bg-[#F5B300]"></span>
+
+              <span
+                class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5B300]"
+              >
+                Let's Work Together
+              </span>
+            </div>
+
+            <h2
+              class="reveal text-[14vw] font-black leading-[0.82] tracking-[-0.06em] opacity-0 translate-y-12 transition-all duration-700 ease-out md:text-[10vw] lg:text-[8vw]"
+            >
+              LET'S
+              <br />
+
+              <span class="text-white/25"> BUILD </span>
+
+              <span class="text-[#F5B300]"> . </span>
+            </h2>
+
+            <div
+              class="reveal mt-10 max-w-xl opacity-0 translate-y-12 transition-all duration-700 ease-out"
+            >
+              <p class="text-lg leading-relaxed text-white/55 md:text-xl">
+                <span
+                  class="typewriter"
+                  data-text="Have a project in mind? Let's turn your vision into something built to last."
+                ></span>
+
+                <span
+                  class="ml-1 inline-block h-[0.9em] w-0.5 align-middle bg-[#F5B300] animate-pulse"
+                ></span>
+              </p>
+            </div>
+
+            <div
+              class="reveal mt-9 opacity-0 translate-y-12 transition-all duration-700 ease-out"
+            >
+              <a
+                href="mailto:hello@mono7177.com"
+                class="inline-flex items-center gap-2.5 bg-[#F5B300] px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.08em] text-[#0B0B0B] transition-all duration-300 hover:-translate-y-1 hover:bg-white sm:gap-3 sm:px-5 sm:py-3.5 sm:text-[11px] sm:tracking-[0.1em]"
+              >
+                <span> Get in Touch </span>
+
+                <svg
+                  class="h-4 w-4 sm:h-[17px] sm:w-[17px]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
                 >
-
-                <div class="absolute inset-0 bg-black/75"></div>
-
+                  <path d="M5 12h14" />
+                  <path d="m13 6 6 6-6 6" />
+                </svg>
+              </a>
             </div>
-
-
-            <div class="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10">
-
-                <div class="max-w-5xl">
-
-                    <div class="reveal mb-8 flex items-center gap-3 opacity-0 translate-y-12 transition-all duration-700 ease-out">
-
-                        <span class="h-px w-10 bg-[#F5B300]"></span>
-
-                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5B300]">
-                            Let's Work Together
-                        </span>
-
-                    </div>
-
-
-                    <h2 class="reveal text-[14vw] font-black leading-[0.82] tracking-[-0.06em] opacity-0 translate-y-12 transition-all duration-700 ease-out md:text-[10vw] lg:text-[8vw]">
-
-                        LET'S
-                        <br>
-
-                        <span class="text-white/25">
-                            BUILD
-                        </span>
-
-                        <span class="text-[#F5B300]">
-                            .
-                        </span>
-
-                    </h2>
-
-
-                    <div class="reveal mt-10 max-w-xl opacity-0 translate-y-12 transition-all duration-700 ease-out">
-
-                        <p class="text-lg leading-relaxed text-white/55 md:text-xl">
-
-                            <span
-                                class="typewriter"
-                                data-text="Have a project in mind? Let's turn your vision into something built to last."
-                            ></span>
-
-                            <span class="ml-1 inline-block h-[0.9em] w-0.5 align-middle bg-[#F5B300] animate-pulse"></span>
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="reveal mt-9 opacity-0 translate-y-12 transition-all duration-700 ease-out">
-
-                        <a
-                            href="mailto:hello@mono7177.com"
-                            class="inline-flex items-center gap-2.5 bg-[#F5B300] px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.08em] text-[#0B0B0B] transition-all duration-300 hover:-translate-y-1 hover:bg-white sm:gap-3 sm:px-5 sm:py-3.5 sm:text-[11px] sm:tracking-[0.1em]"
-                        >
-
-                            <span>
-                                Get in Touch
-                            </span>
-
-                            <svg
-                                class="h-4 w-4 sm:h-[17px] sm:w-[17px]"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path d="M5 12h14"/>
-                                <path d="m13 6 6 6-6 6"/>
-                            </svg>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- =========================================
          FOOTER
     ========================================= -->
 
     <footer class="border-t border-white/10 bg-black">
-
-        <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
-
-            <div class="flex flex-col justify-between gap-8 py-12 md:flex-row">
-
-                <div>
-
-                    <div class="text-xl font-black">
-                        MONO<span class="text-[#F5B300]">7177</span>
-                    </div>
-
-                    <div class="mt-2 text-[9px] uppercase tracking-[0.3em] text-white/30">
-                        Construction & Development
-                    </div>
-
-                </div>
-
-
-                <div class="flex flex-wrap gap-6 text-xs text-white/40">
-
-                    <a href="#home" class="transition hover:text-white">
-                        Home
-                    </a>
-
-                    <a href="#about" class="transition hover:text-white">
-                        About
-                    </a>
-
-                    <a href="#services" class="transition hover:text-white">
-                        Services
-                    </a>
-
-                    <a href="#projects" class="transition hover:text-white">
-                        Projects
-                    </a>
-
-                    <a href="#contact" class="transition hover:text-white">
-                        Contact
-                    </a>
-
-                </div>
-
+      <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
+        <div class="flex flex-col justify-between gap-8 py-12 md:flex-row">
+          <div>
+            <div class="text-xl font-black">
+              <img
+                  src="assets/logo.png"
+                  alt="MONO 7177 Construction Limited"
+                  class="h-24 w-auto object-contain rounded-2xl pr-2 bg-[#F8F3E7]"
+                />
             </div>
 
+            
+          </div>
 
-            <div class="flex flex-col justify-between gap-3 border-t border-white/10 py-5 text-[10px] text-white/25 sm:flex-row">
+          <div class="flex flex-wrap gap-6 text-xs text-white/40">
+            <a href="#home" class="transition hover:text-white"> Home </a>
 
-                <span>
-                    © 2026 MONO7177. All rights reserved.
-                </span>
+            <a href="#about" class="transition hover:text-white"> About </a>
 
-                <span>
-                    Built with precision.
-                </span>
+            <a href="#services" class="transition hover:text-white">
+              Services
+            </a>
 
-            </div>
+            <a href="#projects" class="transition hover:text-white">
+              Projects
+            </a>
 
+            <a href="#contact" class="transition hover:text-white"> Contact </a>
+          </div>
         </div>
 
-    </footer>
+        <div
+          class="flex flex-col justify-between gap-3 border-t border-white/10 py-5 text-[10px] text-white/25 sm:flex-row"
+        >
+          <span> © 2026 MONO7177. All rights reserved. </span>
 
+          <span> Built with precision. </span>
+        </div>
+      </div>
+    </footer>
 
     <!-- =========================================
          JAVASCRIPT
     ========================================= -->
-<script src="./js/script.js"></script>
-
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

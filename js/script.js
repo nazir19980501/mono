@@ -67,46 +67,46 @@
     /* =========================================
        MOBILE MENU
     ========================================= */
-    const mobileButton =
-        document.getElementById("mobileButton");
+    // const mobileButton =
+    //     document.getElementById("mobileButton");
 
-    const mobileMenu =
-        document.getElementById("mobileMenu");
-
-
-    mobileButton?.addEventListener("click", () => {
-        if (!mobileMenu) {
-            return;
-        }
-
-        const isOpen =
-            !mobileMenu.classList.contains("hidden");
-
-        mobileMenu.classList.toggle("hidden", isOpen);
-
-        mobileButton.setAttribute(
-            "aria-expanded",
-            String(!isOpen)
-        );
-    });
+    // const mobileMenu =
+    //     document.getElementById("mobileMenu");
 
 
-    document
-        .querySelectorAll(".mobile-link")
-        .forEach(link => {
+    // mobileButton?.addEventListener("click", () => {
+    //     if (!mobileMenu) {
+    //         return;
+    //     }
 
-            link.addEventListener("click", () => {
+    //     const isOpen =
+    //         !mobileMenu.classList.contains("hidden");
 
-                mobileMenu?.classList.add("hidden");
+    //     mobileMenu.classList.toggle("hidden", isOpen);
 
-                mobileButton?.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+    //     mobileButton.setAttribute(
+    //         "aria-expanded",
+    //         String(!isOpen)
+    //     );
+    // });
 
-            });
 
-        });
+    // document
+    //     .querySelectorAll(".mobile-link")
+    //     .forEach(link => {
+
+    //         link.addEventListener("click", () => {
+
+    //             mobileMenu?.classList.add("hidden");
+
+    //             mobileButton?.setAttribute(
+    //                 "aria-expanded",
+    //                 "false"
+    //             );
+
+    //         });
+
+    //     });
 
 
 
@@ -242,7 +242,7 @@
 
                                     setTimeout(
                                         typeWriter,
-                                        80
+                                        100
                                     );
 
                                 }
@@ -253,7 +253,7 @@
                             /* Start after reveal finishes */
                             setTimeout(
                                 typeWriter,
-                                700
+                                1200
                             );
 
                         }
@@ -276,6 +276,99 @@
 
     revealElements.forEach(element => {
         revealObserver.observe(element);
+    });
+
+
+    
+    const heroImage =
+        document.querySelector(".hero-image");
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (!heroImage) return;
+
+            const scroll =
+                window.scrollY;
+
+            if (scroll < window.innerHeight) {
+
+                heroImage.style.transform =
+                    `scale(${1 + scroll * 0.00008})
+                     translateY(${scroll * 0.08}px)`;
+
+            }
+
+        },
+        { passive: true }
+    );
+
+
+const mobileButton = document.getElementById("mobileButton");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+const mobileLinks =
+    document.querySelectorAll(".mobile-link");
+
+mobileButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+});
+
+mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+    });
+});
+
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+    const sectionObserver =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        const id =
+                            entry.target.getAttribute("id");
+
+                        navLinks.forEach(link => {
+
+                            link.classList.remove("active");
+
+                            if (
+                                link.getAttribute("href") ===
+                                "#" + id
+                            ) {
+                                link.classList.add("active");
+                            }
+
+                        });
+
+                    }
+
+                });
+
+            },
+            {
+                rootMargin: "-40% 0px -50% 0px"
+            }
+        );
+
+
+    sections.forEach(section => {
+
+        if (section) {
+            sectionObserver.observe(section);
+        }
+
     });
 
 
