@@ -6,6 +6,7 @@
 
     <title>MONO7177 | Construction & Development</title>
     <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <meta
         name="description"
@@ -13,9 +14,9 @@
     >
 
     <!-- Tailwind CSS ONLY -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-    <script>
+    <!-- <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -25,7 +26,7 @@
                 }
             }
         };
-    </script>
+    </script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,46 +37,7 @@
 </head>
 
 <body class="m-0 overflow-x-hidden bg-[#0B0B0B] font-inter text-white">
-
-    <!-- =========================================
-         SCROLL PROGRESS
-    ========================================= -->
-
-    <div
-        class="pointer-events-none fixed left-0 top-3 z-[10000] flex h-1 w-full gap-1 px-0 md:top-3"
-        aria-hidden="true"
-    >
-        <div class="relative h-1 min-w-0 flex-1 overflow-hidden rounded-full bg-white/[0.14]">
-            <div
-                id="progress1"
-                class="absolute left-0 top-0 h-full w-0 rounded-full bg-gradient-to-r from-[#F5B300] via-[#FFC62E] to-[#F5B300] shadow-[0_0_10px_rgba(245,179,0,0.25)] transition-[width] duration-150"
-            ></div>
-        </div>
-
-        <div class="relative h-1 min-w-0 flex-1 overflow-hidden rounded-full bg-white/[0.14]">
-            <div
-                id="progress2"
-                class="absolute left-0 top-0 h-full w-0 rounded-full bg-gradient-to-r from-[#F5B300] via-[#FFC62E] to-[#F5B300] shadow-[0_0_10px_rgba(245,179,0,0.25)] transition-[width] duration-150"
-            ></div>
-        </div>
-
-        <div class="relative h-1 min-w-0 flex-1 overflow-hidden rounded-full bg-white/[0.14]">
-            <div
-                id="progress3"
-                class="absolute left-0 top-0 h-full w-0 rounded-full bg-gradient-to-r from-[#F5B300] via-[#FFC62E] to-[#F5B300] shadow-[0_0_10px_rgba(245,179,0,0.25)] transition-[width] duration-150"
-            ></div>
-        </div>
-
-        <div class="relative h-1 min-w-0 flex-1 overflow-hidden rounded-full bg-white/[0.14]">
-            <div
-                id="progress4"
-                class="absolute left-0 top-0 h-full w-0 rounded-full bg-gradient-to-r from-[#F5B300] via-[#FFC62E] to-[#F5B300] shadow-[0_0_10px_rgba(245,179,0,0.25)] transition-[width] duration-150"
-            ></div>
-        </div>
-    </div>
-
-
-    <!-- =========================================
+     <!-- =========================================
          PRELOADER
     ========================================= -->
 
@@ -119,176 +81,190 @@
     </div>
 
 
+
     <!-- =========================================
-         NAVIGATION
+         SCROLL PROGRESS
     ========================================= -->
 
-    <header class="fixed left-0 top-0 z-[9000] w-full">
+<div id="scrollProgress"></div>
 
-        <nav class="border-b border-white/10 bg-black/70 backdrop-blur-xl">
+<div class="progress-points">
 
-            <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
-
-                <div class="flex h-20 items-center justify-between">
-
-                    <!-- Logo -->
-
-                    <a href="#home" class="group">
-
-                        <div class="text-xl font-black tracking-tight">
-                            MONO<span class="text-[#F5B300]">7177</span>
-                        </div>
-
-                        <div class="text-[8px] uppercase tracking-[0.35em] text-white/40">
-                            Construction
-                        </div>
-
-                    </a>
-
-
-                    <!-- Desktop Navigation -->
-
-                    <div class="hidden items-center gap-9 md:flex">
-
-                        <a
-                            href="#home"
-                            class="relative text-xs font-semibold text-white after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:bg-[#F5B300] transition-colors hover:text-white"
-                        >
-                            Home
-                        </a>
-
-                        <a
-                            href="#about"
-                            class="relative text-xs font-semibold text-white/65 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-[#F5B300] transition-all hover:text-white hover:after:w-full"
-                        >
-                            About
-                        </a>
-
-                        <a
-                            href="#services"
-                            class="relative text-xs font-semibold text-white/65 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-[#F5B300] transition-all hover:text-white hover:after:w-full"
-                        >
-                            Services
-                        </a>
-
-                        <a
-                            href="#projects"
-                            class="relative text-xs font-semibold text-white/65 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-[#F5B300] transition-all hover:text-white hover:after:w-full"
-                        >
-                            Projects
-                        </a>
-
-                        <a
-                            href="#process"
-                            class="relative text-xs font-semibold text-white/65 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-[#F5B300] transition-all hover:text-white hover:after:w-full"
-                        >
-                            Process
-                        </a>
-
-                    </div>
-
-
-                    <!-- Desktop CTA -->
-
-         <a
-    href="#contact"
-    class="group relative hidden items-center gap-2.5 overflow-hidden bg-[#F5B300] px-5 py-3.5 text-[11px] font-extrabold uppercase tracking-[0.1em] text-[#0B0B0B] md:inline-flex"
->
-    <!-- White fill -->
     <span
-        class="absolute inset-y-0 left-0 z-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full"
-    ></span>
-
-    <!-- Button content -->
-    <span class="relative z-10 text-[#0B0B0B]">
-        Start a Project
+        class="progress-point"
+        data-progress="0"
+        style="left: 0%;">
     </span>
 
-    <svg
-        class="relative z-10 h-[15px] w-[15px] text-[#0B0B0B]"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-    >
-        <path d="M5 12h14"/>
-        <path d="m13 6 6 6-6 6"/>
-    </svg>
-</a>
+    <span
+        class="progress-point"
+        data-progress="18"
+        style="left: 18%;">
+    </span>
 
-                    <!-- Mobile Button -->
+    <span
+        class="progress-point"
+        data-progress="40"
+        style="left: 40%;">
+    </span>
 
-                    <button
-                        id="mobileButton"
-                        type="button"
-                        class="flex h-9 w-9 items-center justify-center border border-white/15 md:hidden"
-                        aria-label="Open menu"
-                        aria-expanded="false"
-                    >
-                        <div class="space-y-1.5">
-                            <span class="block h-px w-4 bg-white"></span>
-                            <span class="block h-px w-4 bg-white"></span>
-                        </div>
-                    </button>
+    <span
+        class="progress-point"
+        data-progress="65"
+        style="left: 65%;">
+    </span>
+
+    <span
+        class="progress-point"
+        data-progress="84"
+        style="left: 84%;">
+    </span>
+
+    <span
+        class="progress-point"
+        data-progress="100"
+        style="left: 100%;">
+    </span>
+
+</div>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header class="fixed top-0 left-0 w-full z-[9000]">
+
+    <nav class="border-b border-white/10 bg-black/70 backdrop-blur-xl">
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+            <div class="h-20 flex items-center justify-between">
+
+                <!-- Logo -->
+
+                <a href="#home" class="group">
+
+                    <div class="text-xl font-black tracking-tight">
+                        MONO<span class="text-mono-gold">7177</span>
+                    </div>
+
+                    <div class="text-[8px] uppercase tracking-[0.35em] text-white/40">
+                        Construction
+                    </div>
+
+                </a>
+
+
+                <!-- Desktop Navigation -->
+
+                <div class="hidden md:flex items-center gap-9">
+
+                    <a href="#home" class="nav-link active text-xs font-semibold">
+                        Home
+                    </a>
+
+                    <a href="#about" class="nav-link text-xs font-semibold">
+                        About
+                    </a>
+
+                    <a href="#services" class="nav-link text-xs font-semibold">
+                        Services
+                    </a>
+
+                    <a href="#projects" class="nav-link text-xs font-semibold">
+                        Projects
+                    </a>
+
+                    <a href="#process" class="nav-link text-xs font-semibold">
+                        Process
+                    </a>
 
                 </div>
 
 
-                <!-- Mobile Menu -->
+                <!-- Desktop CTA -->
 
-                <div id="mobileMenu" class="hidden md:hidden">
+                <a
+                    href="#contact"
+                    class="hidden md:inline-flex mono-button "
+                >
+                    <span>Start a Project</span>
 
-                    <div class="flex flex-col border-t border-white/10 py-5">
+                    <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M5 12h14"/>
+                        <path d="m13 6 6 6-6 6"/>
+                    </svg>
 
-                        <a
-                            href="#home"
-                            class="mobile-link py-3 text-sm text-white/70 transition-colors hover:text-white"
-                        >
-                            Home
-                        </a>
+                </a>
 
-                        <a
-                            href="#about"
-                            class="mobile-link py-3 text-sm text-white/70 transition-colors hover:text-white"
-                        >
-                            About
-                        </a>
 
-                        <a
-                            href="#services"
-                            class="mobile-link py-3 text-sm text-white/70 transition-colors hover:text-white"
-                        >
-                            Services
-                        </a>
+                <!-- Mobile Button -->
 
-                        <a
-                            href="#projects"
-                            class="mobile-link py-3 text-sm text-white/70 transition-colors hover:text-white"
-                        >
-                            Projects
-                        </a>
+                <button
+                    id="mobileButton"
+                    class="md:hidden w-10 h-10 border border-white/15 flex items-center justify-center"
+                    aria-label="Open menu"
+                >
 
-                        <a
-                            href="#process"
-                            class="mobile-link py-3 text-sm text-white/70 transition-colors hover:text-white"
-                        >
-                            Process
-                        </a>
+                    <div class="space-y-1.5">
 
-                        <a
-                            href="#contact"
-                            class="mobile-link py-3 font-bold text-[#F5B300]"
-                        >
-                            Start a Project →
-                        </a>
+                        <span class="block w-5 h-px bg-white"></span>
+                        <span class="block w-5 h-px bg-white"></span>
 
                     </div>
+
+                </button>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+
+            <div id="mobileMenu" class="md:hidden">
+
+                <div class="py-5 border-t border-white/10 flex flex-col">
+
+                    <a href="#home" class="mobile-link py-3 text-sm text-white/70">
+                        Home
+                    </a>
+
+                    <a href="#about" class="mobile-link py-3 text-sm text-white/70">
+                        About
+                    </a>
+
+                    <a href="#services" class="mobile-link py-3 text-sm text-white/70">
+                        Services
+                    </a>
+
+                    <a href="#projects" class="mobile-link py-3 text-sm text-white/70">
+                        Projects
+                    </a>
+
+                    <a href="#process" class="mobile-link py-3 text-sm text-white/70">
+                        Process
+                    </a>
+
+                    <a href="#contact" class="mobile-link py-3 text-mono-gold font-bold">
+                        Start a Project →
+                    </a>
 
                 </div>
 
             </div>
 
-        </nav>
+        </div>
+
+    </nav>
+
+
 
     </header>
 
@@ -345,9 +321,10 @@
                         BUILDING
                         <br>
 
-                        <span class="text-white/20">
+                        <span class="text-white/20 typewriter">
                             WHAT
                         </span>
+                        <span class="typewriter-cursor"></span>
 
                         <br>
 
@@ -577,425 +554,454 @@
              SERVICES
         ========================================= -->
 
-        <section
-            id="services"
-            data-section="services"
-            class="bg-[#0B0B0B] py-28 lg:py-40"
-        >
 
-            <div class="mx-auto max-w-[1400px] px-6 lg:px-10">
-
-                <div class="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-
-                    <div>
-
-                        <div class="mb-6 flex items-center gap-3">
-
-                            <span class="h-px w-8 bg-[#F5B300]"></span>
-
-                            <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5B300]">
-                                What We Do
-                            </span>
-
-                        </div>
-
-                        <h2 class="text-5xl font-black tracking-[-0.05em] md:text-7xl">
-
-                            OUR
-                            <span class="text-white/20">
-                                SERVICES
-                            </span>
-
-                        </h2>
-
-                    </div>
-
-
-                    <p class="max-w-md leading-relaxed text-white/45">
-
-                        From the first concept to the final detail, our work is built
-                        around quality, communication and execution.
-
-                    </p>
-
-                </div>
-
-
-                <div class="border-t border-white/10">
-
-
-                    <!-- SERVICE 01 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    01
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Drywall
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Professional drywall installation and finishing
-                                    for clean, durable and well-finished interior spaces.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SERVICE 02 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    02
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Mud & Tape
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Careful mudding, taping and finishing to create
-                                    smooth surfaces ready for the final finish.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SERVICE 03 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    03
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Painting
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Interior and exterior painting with attention to
-                                    preparation, clean application and lasting results.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SERVICE 04 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    04
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Tile
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Precise tile installation for floors, walls,
-                                    bathrooms, kitchens and other finished spaces.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SERVICE 05 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    05
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Flooring
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Quality flooring installation with clean,
-                                    accurate and professional finishing.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SERVICE 06 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    06
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Framing
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Reliable framing work built with accuracy and
-                                    attention to the structure of every project.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SERVICE 07 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    07
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Door Installation
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Professional door installation with proper
-                                    alignment, fitting and finishing.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SERVICE 08 -->
-
-                    <div class="group border-b border-white/10 py-8 transition-all duration-300 hover:bg-white/[0.03] md:py-10">
-
-                        <div class="grid items-center gap-5 md:grid-cols-12">
-
-                            <div class="md:col-span-1">
-
-                                <div class="text-sm font-bold text-white/30 transition-colors group-hover:text-[#F5B300]">
-                                    08
-                                </div>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <h3 class="text-3xl font-black tracking-tight md:text-5xl">
-                                    Window Installation
-                                </h3>
-
-                            </div>
-
-                            <div class="md:col-span-5">
-
-                                <p class="text-sm leading-relaxed text-white/45">
-
-                                    Accurate window installation focused on proper
-                                    fitting, finishing and functionality.
-
-                                </p>
-
-                            </div>
-
-                            <div class="text-right md:col-span-1">
-
-                                <span class="text-2xl text-white/20 transition-colors group-hover:text-[#F5B300]">
-                                    ↗
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+<!-- SERVICES -->
+<section id="services" class="py-32 bg-[#0B0B0B]">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="grid lg:grid-cols-2 gap-12 items-end mb-20">
+            <div>
+                <p class="text-[#F5B300] text-sm tracking-[0.3em] uppercase mb-5">
+                    What We Do
+                </p>
+
+                <h2 class="text-5xl md:text-7xl font-bold tracking-tight text-white">
+                    Our Services
+                </h2>
             </div>
 
-        </section>
+            <p class="text-white/50 text-lg max-w-xl leading-relaxed">
+                Professional installation and construction services delivered
+                with precision, quality, and attention to detail.
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+
+            <!-- Door Installation -->
+            <a href="#contact"
+               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+
+                <div class="flex items-start justify-between">
+
+                    <!-- DOOR ICON -->
+                    <svg
+                        class="w-12 h-12 text-[#F5B300]"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M10 42V6C10 4.89543 10.8954 4 12 4H36C37.1046 4 38 4.89543 38 6V42"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M16 42V10H32V42"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <circle
+                            cx="28"
+                            cy="26"
+                            r="1.8"
+                            fill="currentColor"
+                        />
+                        <path
+                            d="M6 42H42"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                    </svg>
+
+                    <svg
+                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 17L17 7"/>
+                        <path d="M7 7H17V17"/>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">
+                        Door Installation
+                    </h3>
+
+                    <p class="text-white/40 leading-relaxed">
+                        Professional door installation with precise fitting,
+                        finishing, and reliable workmanship.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- Window Installation -->
+            <a href="#contact"
+               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+
+                <div class="flex items-start justify-between">
+
+                    <!-- WINDOW ICON -->
+                    <svg
+                        class="w-12 h-12 text-[#F5B300]"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="5"
+                            y="5"
+                            width="38"
+                            height="38"
+                            rx="1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M24 5V43"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M5 24H43"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                    </svg>
+
+                    <svg
+                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 17L17 7"/>
+                        <path d="M7 7H17V17"/>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">
+                        Window Installation
+                    </h3>
+
+                    <p class="text-white/40 leading-relaxed">
+                        Quality window installation focused on accurate
+                        measurements, sealing, and clean finishing.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- Siding Installation -->
+            <a href="#contact"
+               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+
+                <div class="flex items-start justify-between">
+
+                    <!-- SIDING ICON -->
+                    <svg
+                        class="w-12 h-12 text-[#F5B300]"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M7 10H41"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M7 18H41"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M7 26H41"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M7 34H41"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M7 42H41"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M13 10V18"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M29 18V26"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M18 26V34"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M35 34V42"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                    </svg>
+
+                    <svg
+                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 17L17 7"/>
+                        <path d="M7 7H17V17"/>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">
+                        Siding Installation
+                    </h3>
+
+                    <p class="text-white/40 leading-relaxed">
+                        Durable siding installation that improves exterior
+                        protection and overall appearance.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- Roofing -->
+            <a href="#contact"
+               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+
+                <div class="flex items-start justify-between">
+
+                    <!-- ROOFING ICON -->
+                    <svg
+                        class="w-12 h-12 text-[#F5B300]"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M5 23L24 7L43 23"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M9 20V41H39V20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M18 41V29H30V41"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                    </svg>
+
+                    <svg
+                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 17L17 7"/>
+                        <path d="M7 7H17V17"/>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">
+                        Roofing
+                    </h3>
+
+                    <p class="text-white/40 leading-relaxed">
+                        Reliable roofing solutions built with attention to
+                        durability, installation quality, and detail.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- Remodeling -->
+            <a href="#contact"
+               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+
+                <div class="flex items-start justify-between">
+
+                    <!-- HAMMER ICON -->
+                    <svg
+                        class="w-12 h-12 text-[#F5B300]"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M29 8L40 19"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M33 4L44 15L38 21L27 10L33 4Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M29 18L10 37"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M6 34L14 42"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+
+                    <svg
+                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 17L17 7"/>
+                        <path d="M7 7H17V17"/>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">
+                        Remodeling
+                    </h3>
+
+                    <p class="text-white/40 leading-relaxed">
+                        Professional remodeling services transforming spaces
+                        with practical design and quality craftsmanship.
+                    </p>
+                </div>
+            </a>
+
+
+            <!-- Exterior Construction -->
+            <a href="#contact"
+               class="group bg-[#0B0B0B] p-10 min-h-[280px] flex flex-col justify-between hover:bg-white/[0.03] transition-all duration-300">
+
+                <div class="flex items-start justify-between">
+
+                    <!-- BUILDING ICON -->
+                    <svg
+                        class="w-12 h-12 text-[#F5B300]"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M7 42V10L24 5L41 10V42"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M7 42H41"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M14 17H18"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M30 17H34"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M14 24H18"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M30 24H34"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M19 42V32H29V42"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                    </svg>
+
+                    <svg
+                        class="w-6 h-6 text-white/20 group-hover:text-[#F5B300] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 17L17 7"/>
+                        <path d="M7 7H17V17"/>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">
+                        Exterior Construction
+                    </h3>
+
+                    <p class="text-white/40 leading-relaxed">
+                        Complete exterior construction work designed for
+                        lasting performance and a refined finish.
+                    </p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
 
 
         <!-- =========================================
@@ -1025,7 +1031,7 @@
 
                     <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
 
-                        <h2 class="text-5xl font-black leading-none tracking-[-0.05em] md:text-7xl">
+                        <h2 class=" text-5xl font-black leading-none tracking-[-0.05em] md:text-7xl">
 
                             SELECTED
                             <br>
@@ -1305,7 +1311,7 @@
                             IDEA TO
                             <br>
 
-                            <span class="text-white/20">
+                            <span class=" text-white/20">
                                 REALITY.
                             </span>
 
@@ -1601,388 +1607,7 @@
     <!-- =========================================
          JAVASCRIPT
     ========================================= -->
-
-    <script>
-        (() => {
-
-            /* =========================================
-               PRELOADER
-            ========================================= */
-
-            const preloader = document.getElementById("preloader");
-            const loaderFill = document.getElementById("loaderFill");
-            const loaderPercentage = document.getElementById("loaderPercentage");
-
-            let progress = 0;
-
-            const loaderTimer = setInterval(() => {
-
-                progress = Math.min(
-                    progress + Math.floor(Math.random() * 10) + 4,
-                    92
-                );
-
-                if (loaderFill) {
-                    loaderFill.style.width = progress + "%";
-                }
-
-                if (loaderPercentage) {
-                    loaderPercentage.textContent = progress + "%";
-                }
-
-            }, 80);
-
-
-            function hidePreloader() {
-
-                clearInterval(loaderTimer);
-
-                if (loaderFill) {
-                    loaderFill.style.width = "100%";
-                }
-
-                if (loaderPercentage) {
-                    loaderPercentage.textContent = "100%";
-                }
-
-                if (!preloader) {
-                    return;
-                }
-
-                setTimeout(() => {
-
-                    preloader.classList.add(
-                        "opacity-0",
-                        "pointer-events-none"
-                    );
-
-                    setTimeout(() => {
-                        preloader.remove();
-                    }, 700);
-
-                }, 250);
-            }
-
-
-            if (document.readyState === "complete") {
-
-                hidePreloader();
-
-            } else {
-
-                window.addEventListener(
-                    "load",
-                    hidePreloader,
-                    { once: true }
-                );
-
-            }
-
-
-            /* =========================================
-               MOBILE MENU
-            ========================================= */
-
-            const mobileButton =
-                document.getElementById("mobileButton");
-
-            const mobileMenu =
-                document.getElementById("mobileMenu");
-
-
-            mobileButton?.addEventListener("click", () => {
-
-                if (!mobileMenu) {
-                    return;
-                }
-
-                const isOpen =
-                    !mobileMenu.classList.contains("hidden");
-
-                mobileMenu.classList.toggle("hidden", isOpen);
-
-                mobileButton.setAttribute(
-                    "aria-expanded",
-                    String(!isOpen)
-                );
-
-            });
-
-
-            document
-                .querySelectorAll(".mobile-link")
-                .forEach(link => {
-
-                    link.addEventListener("click", () => {
-
-                        mobileMenu?.classList.add("hidden");
-
-                        mobileButton?.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    });
-
-                });
-
-
-            /* =========================================
-               FOUR-PART SCROLL PROGRESS
-            ========================================= */
-
-            const progressBars = [1, 2, 3, 4]
-                .map(number =>
-                    document.getElementById(
-                        "progress" + number
-                    )
-                );
-
-
-            function updateScrollProgress() {
-
-                const scrollTop =
-                    window.scrollY ||
-                    document.documentElement.scrollTop;
-
-                const documentHeight =
-                    document.documentElement.scrollHeight -
-                    document.documentElement.clientHeight;
-
-                const scrollPercent =
-                    documentHeight > 0
-                        ? (scrollTop / documentHeight) * 100
-                        : 0;
-
-                const segment = 25;
-
-
-                progressBars.forEach((bar, index) => {
-
-                    if (!bar) {
-                        return;
-                    }
-
-                    const value =
-                        Math.min(
-                            Math.max(
-                                (
-                                    scrollPercent -
-                                    index * segment
-                                ) / segment,
-                                0
-                            ),
-                            1
-                        ) * 100;
-
-                    bar.style.width = value + "%";
-
-                });
-
-            }
-
-
-            window.addEventListener(
-                "scroll",
-                updateScrollProgress,
-                { passive: true }
-            );
-
-            window.addEventListener(
-                "resize",
-                updateScrollProgress
-            );
-
-            updateScrollProgress();
-
-
-            /* =========================================
-               REVEAL ANIMATIONS
-            ========================================= */
-
-            const revealItems =
-                document.querySelectorAll(
-                    ".reveal, .reveal-left, .reveal-right"
-                );
-
-
-            const revealObserver =
-                new IntersectionObserver(
-                    entries => {
-
-                        entries.forEach(entry => {
-
-                            if (!entry.isIntersecting) {
-                                return;
-                            }
-
-                            entry.target.classList.remove(
-                                "opacity-0",
-                                "translate-y-12",
-                                "-translate-x-12",
-                                "translate-x-12"
-                            );
-
-                            entry.target.classList.add(
-                                "opacity-100",
-                                "translate-x-0",
-                                "translate-y-0"
-                            );
-
-                            revealObserver.unobserve(
-                                entry.target
-                            );
-
-                        });
-
-                    },
-                    {
-                        threshold: 0.12
-                    }
-                );
-
-
-            revealItems.forEach(item => {
-
-                revealObserver.observe(item);
-
-            });
-
-
-            /* =========================================
-               HERO IMAGE
-            ========================================= */
-
-            window.addEventListener(
-                "load",
-                () => {
-
-                    document
-                        .querySelectorAll(".hero-image")
-                        .forEach(image => {
-
-                            image.classList.remove("scale-105");
-
-                            image.classList.add("scale-100");
-
-                        });
-
-                },
-                { once: true }
-            );
-
-
-            /* =========================================
-               TYPEWRITER
-            ========================================= */
-
-            document
-                .querySelectorAll(".typewriter")
-                .forEach(element => {
-
-                    const text =
-                        element.dataset.text || "";
-
-                    let index = 0;
-
-                    element.textContent = "";
-
-
-                    function type() {
-
-                        if (index < text.length) {
-
-                            element.textContent +=
-                                text[index];
-
-                            index++;
-
-                            setTimeout(type, 32);
-
-                        }
-
-                    }
-
-
-                    setTimeout(type, 500);
-
-                });
-
-
-            /* =========================================
-               ACTIVE NAVIGATION
-            ========================================= */
-
-            const sections =
-                document.querySelectorAll(
-                    "section[data-section]"
-                );
-
-            const navLinks =
-                document.querySelectorAll(
-                    "header a[href^='#']"
-                );
-
-
-            const navObserver =
-                new IntersectionObserver(
-                    entries => {
-
-                        entries.forEach(entry => {
-
-                            if (!entry.isIntersecting) {
-                                return;
-                            }
-
-                            const id =
-                                entry.target.id;
-
-
-                            navLinks.forEach(link => {
-
-                                const active =
-                                    link.getAttribute("href") ===
-                                    "#" + id;
-
-                                link.classList.toggle(
-                                    "text-white",
-                                    active
-                                );
-
-                                link.classList.toggle(
-                                    "text-white/65",
-                                    !active
-                                );
-
-                                link.classList.toggle(
-                                    "after:w-full",
-                                    active
-                                );
-
-                                link.classList.toggle(
-                                    "after:w-0",
-                                    !active
-                                );
-
-                            });
-
-                        });
-
-                    },
-                    {
-                        threshold: 0.45
-                    }
-                );
-
-
-            sections.forEach(section => {
-
-                navObserver.observe(section);
-
-            });
-
-        })();
-    </script>
+<script src="./js/script.js"></script>
 
 </body>
 </html>
