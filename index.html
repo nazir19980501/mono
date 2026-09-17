@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="./assets/favicon.png?v=2">
     <title>MONO7177 Construction Limited | Drywall, Painting & Renovation</title>
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -100,6 +100,19 @@
       ]
     }
     </script>
+
+    <style>
+      @media (hover: none) {
+        .project-photo.show-result .project-original {
+          opacity: 0;
+          transform: scale(1.05);
+        }
+        .project-photo.show-result .project-result {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
 
   <body class="m-0 overflow-x-hidden bg-[#0B0B0B] font-inter text-white">
@@ -914,12 +927,20 @@
           <div class="grid gap-6 md:grid-cols-2 lg:gap-8">
             <!-- PROJECT 01 -->
             <article class="group">
-              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+              <div class="project-photo relative aspect-[4/3] overflow-hidden bg-black">
                 <img
-                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  class="project-original absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
                   src="assets/drywall.jpg"
                   alt="Drywall installation"
                 />
+                <img
+                  class="project-result absolute inset-0 h-full w-full object-cover opacity-0 scale-105 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-100"
+                  src="assets/result1.jpg"
+                  alt="Drywall installation — completed result"
+                />
+                <div class="project-hint pointer-events-none absolute top-4 right-4 z-20 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white/90 backdrop-blur-sm opacity-90 transition-opacity duration-300 md:hidden">
+                  Tap to see result
+                </div>
 
                 <div
                   class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -955,12 +976,20 @@
 
             <!-- PROJECT 02 -->
             <article class="group md:mt-24">
-              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+              <div class="project-photo relative aspect-[4/3] overflow-hidden bg-black">
                 <img
-                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  class="project-original absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
                   src="assets/flooring.jpg"
                   alt="Flooring installation"
                 />
+                <img
+                  class="project-result absolute inset-0 h-full w-full object-cover opacity-0 scale-105 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-100"
+                  src="assets/result2.jpg"
+                  alt="Flooring installation — completed result"
+                />
+                <div class="project-hint pointer-events-none absolute top-4 right-4 z-20 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white/90 backdrop-blur-sm opacity-90 transition-opacity duration-300 md:hidden">
+                  Tap to see result
+                </div>
 
                 <div
                   class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -996,12 +1025,20 @@
 
             <!-- PROJECT 03 -->
             <article class="group">
-              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+              <div class="project-photo relative aspect-[4/3] overflow-hidden bg-black">
                 <img
-                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  class="project-original absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
                   src="assets/mod.jpg"
                   alt="Drywall mud and tape"
                 />
+                <img
+                  class="project-result absolute inset-0 h-full w-full object-cover opacity-0 scale-105 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-100"
+                  src="assets/result3.jpg"
+                  alt="Drywall mud and tape — completed result"
+                />
+                <div class="project-hint pointer-events-none absolute top-4 right-4 z-20 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white/90 backdrop-blur-sm opacity-90 transition-opacity duration-300 md:hidden">
+                  Tap to see result
+                </div>
 
                 <div
                   class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -1039,12 +1076,20 @@
 
             <!-- PROJECT 04 -->
             <article class="group md:mt-24">
-              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+              <div class="project-photo relative aspect-[4/3] overflow-hidden bg-black">
                 <img
-                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  class="project-original absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
                   src="assets/interior.jpeg"
                   alt="Interior painting"
                 />
+                <img
+                  class="project-result absolute inset-0 h-full w-full object-cover opacity-0 scale-105 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-100"
+                  src="assets/result4.jpg"
+                  alt="Interior painting — completed result"
+                />
+                <div class="project-hint pointer-events-none absolute top-4 right-4 z-20 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white/90 backdrop-blur-sm opacity-90 transition-opacity duration-300 md:hidden">
+                  Tap to see result
+                </div>
 
                 <div
                   class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -1079,12 +1124,20 @@
             </article>
                 <!-- PROJECT 05 -->
             <article class="group">
-              <div class="relative aspect-[4/3] overflow-hidden bg-black">
+              <div class="project-photo relative aspect-[4/3] overflow-hidden bg-black">
                 <img
-                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  class="project-original absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
                   src="assets/exterior.jpg"
                   alt="Exterior painting construction project by MONO7177 Construction Limited"
                 />
+                <img
+                  class="project-result absolute inset-0 h-full w-full object-cover opacity-0 scale-105 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-100"
+                  src="assets/result5.jpg"
+                  alt="Exterior painting construction project by MONO7177 Construction Limited — completed result"
+                />
+                <div class="project-hint pointer-events-none absolute top-4 right-4 z-20 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white/90 backdrop-blur-sm opacity-90 transition-opacity duration-300 md:hidden">
+                  Tap to see result
+                </div>
 
                 <div
                   class="absolute inset-0 flex items-end bg-black/55 p-7 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -1411,6 +1464,24 @@
     <!-- =========================================
          JAVASCRIPT
     ========================================= -->
+    
+
+    <script>
+      document.querySelectorAll(".project-photo").forEach((photo) => {
+        const hint = photo.querySelector(".project-hint");
+
+        photo.addEventListener("click", () => {
+          if (window.matchMedia("(hover: none)").matches) {
+            const showingResult = photo.classList.toggle("show-result");
+            if (hint) {
+              hint.textContent = showingResult
+                ? "Tap to see original"
+                : "Tap to see result";
+            }
+          }
+        });
+      });
+    </script>
     <script src="./js/script.js"></script>
   </body>
 </html>

@@ -1,3 +1,7 @@
+ 
+ html {
+  scroll-behavior: smooth;
+}
  #scrollProgress {
             position: fixed;
             top: 0;
@@ -267,3 +271,22 @@
                 scroll-behavior: auto !important;
             }
         }
+
+
+        /* =========================================
+   CONSTRUCTION RULER CURSOR
+========================================= */
+
+html,
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect x='5' y='13' width='22' height='7' rx='1' fill='%23F5B300' stroke='%230B0B0B' stroke-width='1.5'/%3E%3Cpath d='M9 13v4M13 13v3M17 13v4M21 13v3M25 13v4' stroke='%230B0B0B' stroke-width='1.2'/%3E%3C/svg%3E") 2 2, auto;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  cursor: pointer;
+}
