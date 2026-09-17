@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mono7177.com/sitemap.xml
